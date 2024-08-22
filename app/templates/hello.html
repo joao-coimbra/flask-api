@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask API Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Questrial", "ui-sans-serif", "system-ui", "sans-serif"],
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div
+      class="relative h-[100dvh] w-full bg-zinc-950 flex flex-col items-center justify-center text-white select-none"
+    >
+      <h1 class="text-5xl lg:text-7xl font-normal text-center">
+        Hello, World!
+      </h1>
+      <span class="absolute bottom-2 opacity-20 font-thin text-normal"
+        >{{ current_year }} &copy; João Coimbra</span
+      >
+    </div>
+  </body>
+</html>
