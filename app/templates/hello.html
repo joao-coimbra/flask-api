@@ -26,15 +26,16 @@
       class="relative h-[100dvh] w-full bg-zinc-950 flex flex-col items-center justify-center text-white select-none"
     >
       <h1 class="text-5xl lg:text-7xl font-normal text-center">
-        Hello,
-        {% if name %}
-          {{ name }}!
-        {% else %}
-          World!
-        {% endif %}
+        Hello, {% if name %} {{ name }}! {% else %} World! {% endif %}
       </h1>
       <span class="absolute bottom-2 opacity-20 font-thin text-normal"
-        >{{ current_year }} &copy; João Coimbra</span
+        >{{ current_year }} &copy;
+        <a
+          href="https://github.com/joao-coimbra"
+          target="_blank"
+          class="underline"
+          >joao-coimbra</a
+        ></span
       >
     </div>
   </body>
