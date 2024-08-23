@@ -25,6 +25,7 @@ Ensure that you have [Python](https://www.python.org/downloads/) installed. It i
     ```bash
     git clone https://github.com/joao-coimbra/flask-api.git
     cd flask-api
+    cp .env.example .env
     ```
 
 2. Create and activate a virtual environment:
