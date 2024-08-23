@@ -9,4 +9,4 @@ if __name__ == '__main__':
     else:
       app.run(debug=True)
   finally:
-    print('Serviço encerrado')
+    print('Service closed')
