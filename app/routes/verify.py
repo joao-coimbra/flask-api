@@ -1,14 +1,15 @@
+from datetime import datetime
 import secrets
 
-from flask import request, g
+from flask import jsonify, request, g
 import config
 
-from app import app
+from app.routes.api import api
 
 def verify_api_key(api_key):
   return secrets.compare_digest(api_key, config.API_KEY)
 
-@app.before_request
+@api.before_request
 def check_authorization():
   api_key = request.headers.get('Authorization')
     
@@ -18,3 +19,4 @@ def check_authorization():
       g.is_authorized = True
       return
   g.is_authorized = False
+  return jsonify({'error': 'Unauthorized'}), 401
