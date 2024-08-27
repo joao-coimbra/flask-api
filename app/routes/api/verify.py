@@ -1,7 +1,6 @@
-from datetime import datetime
 import secrets
 
-from flask import jsonify, request, g
+from flask import abort, request, g
 import config
 
 from app.routes.api import api
@@ -19,4 +18,4 @@ def check_authorization():
       g.is_authorized = True
       return
   g.is_authorized = False
-  return jsonify({'error': 'Unauthorized'}), 401
+  abort(401, abort(401, description="Invalid or missing API_KEY."))
