@@ -8,9 +8,9 @@ This repository contains a basic template to kickstart API projects using Flask.
   - `__init__.py` - Initializes the Flask application and sets up the modules.
   - `routes/`
     - `__init__.py`  - Defines the API routes.
-    - `verify.py` - Verify API_KEY (Authorization)
     - `api/`
-        - `__init__.py` - Blueprint API
+        - `__init__.py` - Blueprint API.
+        - `verify.py` - Verify API_KEY (Authorization).
 - `config.py` - Application configuration.
 - `requirements.txt` - Lists the project dependencies.
 - `run.py` - Script to run the application.
